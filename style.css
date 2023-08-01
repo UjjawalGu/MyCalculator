@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #daf0ff;
+  font-family: sans-serif;
+}
+.background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1095f2;
+  border-radius: 50%;
+  height: 80%;
+  width: 40%;
+}
+.container {
+  position: absolute;
+  top: 4%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  height: 38rem;
+  width: 23rem;
+  background-color: #a4c4dc8a;
+  border-radius: 1rem;
+  backdrop-filter: blur(7rem);
+  animation: float 6s ease-in-out infinite;
+}
+.input {
+  height: 30vh;
+  width: 100%;
+}
+.buttons {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.btn {
+  padding: 1rem;
+  margin: 8px;
+  border-radius: 1rem;
+  border: 1px solid #ffffff9f;
+  font-size: 1.3rem;
+  background-color: #9cc7eb;
+  backdrop-filter: blur(1rem);
+  color: #fff;
+  transition: all 0.4s;
+}
+.btn:hover {
+  background-color: linear-gradient(to right, #fff, #9cc7eb);
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.btn:active {
+  transform: translateY(4px) scale(1.1);
+}
+.r {
+  grid-column: -2/-1;
+  grid-row: -2/7;
+}
+.p {
+  grid-row: 6/7;
+  grid-column: 1/3;
+  /* background: linear-gradient(to right top, #fff, #9cc7eb); */
+}
+.q {
+  grid-row: 6/7;
+  grid-column: 3/4;
+}
+.operation-box {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.operation {
+  font-size: 1.5rem;
+  color: #555;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output {
+  font-size: 2.5rem;
+  color: #2e2d2d;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output-container {
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+.equal{
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+.symbol {
+  color: #1095f2;
+}
+.dark {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
+.moon {
+  font-size: 2rem;
+}
+.light {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
+.sun {
+  font-size: 2rem;
+}
+.display {
+  display: none;
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.4);
+    transform: translateY(0rem);
+  }
+  50% {
+    box-shadow: 0 2.5rem 1.5rem 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1rem);
+  }
+  100% {
+    box-shadow: 0 5px 1.5rem 0px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+}
